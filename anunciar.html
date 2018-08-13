@@ -20,93 +20,244 @@
   <header>
 
     <div class="container">
-      <div class="brand">
-        <h1><a href="index.html">carga <small>de</small> trabalhos</a></h1>
+      <div class="f-left">
+        <div class="brand">
+          <h1>
+            <a href="index.html">carga
+              <small>de</small> trabalhos</a>
+          </h1>
+        </div>
       </div>
-      <nav>
-        <ul>         
-          <li><a href="">Ofertas</a></li>
-          <li><a href="anunciar.html">Anunciar</a></li>
-          <li><a href="" class="btn">Sign In</a></li>
-        </ul>
-      </nav>
+      <div class="f-right">
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html">Ofertas</a>
+            </li>
+            <li>
+              <a href="anunciar.html">Anunciar</a>
+            </li>
+            <li>
+              <a href="" class="btn">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
 
   </header>
 
-  <!-- MAIN -->
-  <section id="anunciar">
+  <!-- HERO -->
+  <div id="hero" class="bg-hero">
+    <div class="hero-inner">
+      <h2>encontra emprego na área de comunicação</h2>
+      <form>
+        <input id="pesquisa" type="text" placeholder="pesquisar ofertas...">
+        <button type="submit">
+          <span class="search-btn"></span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Filtros -->
+  <section id="filters">
+
     <div class="container">
+      <p>filtrar por:</p>
+      <select id="" name="" onchange="this.form.submit();">
+        <option value="" selected>Categorias</option>
+        <option value="">arte-final + paginação</option>
+        <option value="">audiovisual</option>
+        <option value="">comercial</option>
+        <option value="">comunicação</option>
+        <option value="">design</option>
+        <option value="">estágios</option>
+        <option value="">estrangeiro</option>
+        <option value="">formação</option>
+        <option value="">fotografia</option>
+        <option value="">freelancer</option>
+        <option value="">ilustração</option>
+        <option value="">imprensa</option>
+        <option value="">informação</option>
+        <option value="">jornalismo</option>
+        <option value="">marketing</option>
+        <option value="">media</option>
+        <option value="">multimedia</option>
+        <option value="">notícias carga</option>
+        <option value="">produção</option>
+        <option value="">programação</option>
+        <option value="">publicidade</option>
+        <option value="">relações públicas</option>
+        <option value="">web design</option>
+      </select>
+      <select id="" name="" onchange="this.form.submit();">
+        <option value="" selected>Localidade</option>
+        <option value="">Lisboa</option>
+        <option value="">Porto</option>
+        <option value="">Braga</option>
+        <option value="">Leiria</option>
+        <option value="">Coimbra</option>
+        <option value="">Aveiro</option>
+        <option value="">Setúbal</option>
+      </select>
+    </div>
+
+  </section>
+
+  <!-- MAIN -->
+  <section id="main" class="container">
+    <div class="single">
 
       <h1>Anunciar</h1>
-      <p>As ofertas de emprego deverão estar enquadradas no sector da comunicação.</p>
-      <p>O carga de trabalhos reserva-se ao direito de não colocar ofertas que não se enquadrem no âmbito de actuação deste serviço.</p>
-      <hr>
-      
-      <form id="anuncio" method="post" action="/" enctype='multipart/form-data'>
-        <label class="required">Nome da empresa</label>
-        <input type="text" name="empresa" class="text required" id="empresa" />
+      <p>As ofertas de emprego deverão estar enquadradas no sector da comunicação.
+        <br>O carga de trabalhos reserva-se ao direito de não colocar ofertas que não se enquadrem no âmbito de actuação deste
+        serviço.
+      </p>
 
-        <div>
-          <p>Regime</p>
-          <input id="01" type="radio" name="regime" value="fulltime">
-          <label for="01">Full-time</label>
-          <input id="02" type="radio" name="regime" value="parttime">
-          <label for="02">Part-time</label>
-          <input id="03" type="radio" name="regime" value="freelancer">
-          <label for="03">Freelancer</label>
-          <input id="04" type="radio" name="regime" value="freelancer">
-          <label for="04">Estágio Profissional</label>
-          <input id="05" type="radio" name="regime" value="freelancer">
-          <label for="05">Estágio Curricular</label>
-        </div>
+      <form id="anuncio" class="clearfix" method="post" action="/">
 
-        <div>
-          <p>Categorias</p>
-          <input type="checkbox" name="categorias" value="">arte final + paginação
-          <input type="checkbox" name="categorias" value="">audiovisual
-          <input type="checkbox" name="categorias" value="">comercial
-          <input type="checkbox" name="categorias" value="">comunicação
-          <input type="checkbox" name="categorias" value="">design
-          <input type="checkbox" name="categorias" value="">estrangeiro
-          <input type="checkbox" name="categorias" value="">formação
-          <input type="checkbox" name="categorias" value="">fotografia
-          <input type="checkbox" name="categorias" value="">ilustração
-          <input type="checkbox" name="categorias" value="">imprensa
-          <input type="checkbox" name="categorias" value="">jornalismo
-          <input type="checkbox" name="categorias" value="">marketing
-          <input type="checkbox" name="categorias" value="">media
-          <input type="checkbox" name="categorias" value="">multimédia
-          <input type="checkbox" name="categorias" value="">produção
-          <input type="checkbox" name="categorias" value="">programação
-          <input type="checkbox" name="categorias" value="">publicidade
-          <input type="checkbox" name="categorias" value="">relações públicas
-          <input type="checkbox" name="categorias" value="">web design
-        </div>
+        <div class="left">
 
-        <div>
-          <label for="local">Localização</label>
-          <input type="text" name="local" id="local" />
-        </div>
-
-        <div>
           <label for="titulo">Título da oferta</label>
           <input type="text" name="titulo" id="titulo" />
-        </div>
 
-        <div>
+          <label for="empresa">Nome da empresa</label>
+          <input type="text" name="empresa" id="empresa" />
+
+          <label for="local">Localização</label>
+          <input type="text" name="local" id="local" />
+
           <label for="descr">Descrição da oferta</label>
-          <textarea id="descr" name="descr" id="descr" rows="8" cols="50"></textarea>
+          <textarea id="descr" name="descr" id="descr"></textarea>
+
+          <label for="email">Email</label>
+          <input id="email" type="email" />
+          
+          <div class="checkbox">
+            <input type="checkbox" id="terms">
+            <label for="terms" class="checkbox">
+              Li e Aceito as <a href="condicoes-gerais-servico.html">Condições Gerais do Serviço</a>
+            </label>
+          </div>
+
+          <button type="submit" class="btn">Enviar</button>
+
         </div>
 
-        <div>
-          <label for="contact">Contacto</label>
-          <textarea id="contact" name="contact" id="contact" rows="8" cols="50"></textarea>
+        <div class="right">
+
+          <!--  REGIME -->
+          <div class="checkboxes">
+
+            <label>Regime</label>
+            <div class="checkbox">
+              <input type="radio" name="regime" value="fulltime" id="fulltime">
+              <label for="fulltime">full-time</label>
+            </div>
+            <div class="checkbox">
+              <input type="radio" name="regime" value="parttime" id="parttime">
+              <label for="parttime" class="checkbox">part-time</label>
+            </div>
+            <div class="checkbox">
+              <input type="radio" name="regime" value="freelancer" id="freelancer">
+              <label for="freelancer" class="checkbox">freelancer</label>
+            </div>
+            <div class="checkbox">
+              <input type="radio" name="regime" value="profissional" id="profissional">
+              <label for="profissional" class="checkbox">estágio profissional</label>
+            </div>
+            <div class="checkbox">
+              <input type="radio" name="regime" value="curricular" id="curricular">
+              <label for="curricular" class="checkbox">estágio curricular</label>
+            </div>
+
+          </div>
+
+          <!-- CATEGORIAS -->
+
+          <div class="checkboxes">
+            <label>Categorias</label>
+            <div class="checkbox">
+              <input type="checkbox" name="categorias" value="" id="arte">
+              <label for="arte" class="checkbox">arte final</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="categorias" value="" id="audiovisual">
+              <label for="audiovisual" class="checkbox">audiovisual</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="categorias" value="" id="comercial">
+              <label for="comercial">comercial</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="categorias" value="" id="comunicacao">
+              <label for="comunicacao">comunicação</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="categorias" value="" id="design">
+              <label for="design">design</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="categorias" value="" id="estrangeiro">
+              <label for="estrangeiro">estrangeiro</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="categorias" value="" id="formacao">
+              <label for="formacao">formação</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="categorias" value="" id="ilustracao">
+              <label for="ilustracao">ilustração</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="categorias" value="" id="imprensa">
+              <label for="imprensa">imprensa</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="categorias" value="" id="jornalismo">
+              <label for="jornalismo">jornalismo</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="categorias" value="" id="marketing">
+              <label for="marketing">marketing</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="categorias" value="" id="media">
+              <label for="media">media</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="categorias" value="" id="multimedia">
+              <label for="multimedia">multimédia</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="categorias" value="" id="producao">
+              <label for="producao">produção</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="categorias" value="" id="publicidade">
+              <label for="publicidade">publicidade</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="categorias" value="" id="rp">
+              <label for="rp">relações públicas</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="categorias" value="" id="web">
+              <label for="web">web design</label>
+            </div>
+
+          </div>
+
         </div>
 
       </form>
-      
-      <p><strong>Declinação de Responsabilidade:</strong> Todas as ofertas e anúncios publicados neste site são da exclusiva responsabilidade dos anunciantes/remetentes dos conteúdos. O carga de trabalhos declina qualquer responsabilidade sobre as ofertas, o seu conteúdo bem como sobre a origem das mesmas, além de eventuais problemas que surjam na sequência da utilização deste espaço. Obrigado.</p>
+
+      <p>
+        <strong>Declinação de Responsabilidade:</strong>
+        <br>Todas as ofertas e anúncios publicados neste site são da exclusiva responsabilidade dos anunciantes/remetentes dos
+        conteúdos. O carga de trabalhos declina qualquer responsabilidade sobre as ofertas, o seu conteúdo bem como sobre
+        a origem das mesmas, além de eventuais problemas que surjam na sequência da utilização deste espaço. Obrigado.</p>
 
     </div>
   </section>
@@ -114,24 +265,43 @@
   <!-- FOOTER -->
   <footer>
     <div class="container">
-      <div class="navbar">
+      <div>
         <ul>
-          <li><a href="anunciar.html">Anunciar</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="">Publicidade</a></li>
-          <li><a href="">iMaculado</a></li>
+          <li>
+            <a href="index.html">Empregos</a>
+          </li>
+          <li>
+            <a href="anunciar.html">Anunciar</a>
+          </li>
+          <li>
+            <a href="publicidade.html">Publicidade</a>
+          </li>
+          <li>
+            <a href="sobre.html">Quem Somos</a>
+          </li>
+          <li>
+            <a href="contacto.html">Contacto</a>
+          </li>
+          <li>
+            <a href="condicoes-gerais-servico.html">Condições Gerais de Serviço</a>
+          </li>
+          <li>
+            <a href="politica-privacidade.html">Política de Privacidade</a>
+          </li>
         </ul>
       </div>
-      <div class="social">
+      <div class="social-links">
         <a href="https://www.facebook.com/cargadetrabalhos" target="_blank">
-        <svg viewBox="0 0 67 67" xmlns="http://www.w3.org/2000/svg">
-  <path d="M28.765 50.32h6.744V33.998h4.499l.596-5.624h-5.095l.007-2.816c0-1.466.14-2.253 2.244-2.253h2.812V17.68h-4.5c-5.405 0-7.307 2.729-7.307 7.317v3.377h-3.369v5.625h3.369V50.32zM33 64C16.432 64 3 50.568 3 34 3 17.431 16.432 4 33 4s30 13.431 30 30c0 16.568-13.432 30-30 30z" fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff"/>
-      </svg>
-       </a>
+          <svg viewBox="0 0 67 67" xmlns="http://www.w3.org/2000/svg">
+            <path d="M28.765 50.32h6.744V33.998h4.499l.596-5.624h-5.095l.007-2.816c0-1.466.14-2.253 2.244-2.253h2.812V17.68h-4.5c-5.405 0-7.307 2.729-7.307 7.317v3.377h-3.369v5.625h3.369V50.32zM33 64C16.432 64 3 50.568 3 34 3 17.431 16.432 4 33 4s30 13.431 30 30c0 16.568-13.432 30-30 30z"
+              fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" />
+          </svg>
+        </a>
         <a href="https://twitter.com/carga" target="_blank">
-        <svg viewBox="0 0 67 67" xmlns="http://www.w3.org/2000/svg">
-  <path d="M38.167 22.283c-2.619.953-4.274 3.411-4.086 6.101l.063 1.038-1.048-.127c-3.813-.487-7.145-2.139-9.974-4.915l-1.383-1.377-.356 1.017c-.754 2.267-.272 4.661 1.299 6.271.838.89.649 1.017-.796.487-.503-.169-.943-.296-.985-.233-.146.149.356 2.076.754 2.839.545 1.06 1.655 2.097 2.871 2.712l1.027.487-1.215.021c-1.173 0-1.215.021-1.089.467.419 1.377 2.074 2.839 3.918 3.475l1.299.444-1.131.678c-1.676.976-3.646 1.526-5.616 1.567-.944.021-1.719.106-1.719.17 0 .211 2.557 1.397 4.044 1.864 4.463 1.377 9.765.783 13.746-1.568 2.829-1.674 5.657-5 6.978-8.221.713-1.715 1.425-4.851 1.425-6.354 0-.975.063-1.102 1.236-2.267.692-.678 1.341-1.419 1.467-1.631.21-.403.188-.403-.88-.043-1.781.636-2.033.551-1.152-.402.649-.678 1.425-1.907 1.425-2.267 0-.063-.314.042-.671.233-.377.212-1.215.53-1.844.72l-1.131.361-1.027-.7c-.566-.381-1.361-.805-1.781-.932-1.069-.296-2.704-.254-3.668.085zM34 64C17.432 64 4 50.568 4 34 4 17.431 17.432 4 34 4s30 13.431 30 30c0 16.568-13.432 30-30 30z" fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff"/>
-       </svg>
+          <svg viewBox="0 0 67 67" xmlns="http://www.w3.org/2000/svg">
+            <path d="M38.167 22.283c-2.619.953-4.274 3.411-4.086 6.101l.063 1.038-1.048-.127c-3.813-.487-7.145-2.139-9.974-4.915l-1.383-1.377-.356 1.017c-.754 2.267-.272 4.661 1.299 6.271.838.89.649 1.017-.796.487-.503-.169-.943-.296-.985-.233-.146.149.356 2.076.754 2.839.545 1.06 1.655 2.097 2.871 2.712l1.027.487-1.215.021c-1.173 0-1.215.021-1.089.467.419 1.377 2.074 2.839 3.918 3.475l1.299.444-1.131.678c-1.676.976-3.646 1.526-5.616 1.567-.944.021-1.719.106-1.719.17 0 .211 2.557 1.397 4.044 1.864 4.463 1.377 9.765.783 13.746-1.568 2.829-1.674 5.657-5 6.978-8.221.713-1.715 1.425-4.851 1.425-6.354 0-.975.063-1.102 1.236-2.267.692-.678 1.341-1.419 1.467-1.631.21-.403.188-.403-.88-.043-1.781.636-2.033.551-1.152-.402.649-.678 1.425-1.907 1.425-2.267 0-.063-.314.042-.671.233-.377.212-1.215.53-1.844.72l-1.131.361-1.027-.7c-.566-.381-1.361-.805-1.781-.932-1.069-.296-2.704-.254-3.668.085zM34 64C17.432 64 4 50.568 4 34 4 17.431 17.432 4 34 4s30 13.431 30 30c0 16.568-13.432 30-30 30z"
+              fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" />
+          </svg>
         </a>
       </div>
       <p>Carga de Trabalhos &copy; since 2014</p>
@@ -140,6 +310,7 @@
 
   <!-- JAVSCRIPT -->
   <script src="/js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </body>
 
